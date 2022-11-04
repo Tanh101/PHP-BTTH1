@@ -6,11 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .find-staff {
+            
+        }
+    </style>
 </head>
+
 
 <body>
     <form action="" method="POST">
-        <div>
+        <div class="find-staff">
 
             <label for="cars">Chon loai tim kiem:</label>
             <select name="inforOption" id="cars">
@@ -20,7 +26,7 @@
                 <option value="Diachi">Địa Chỉ</option>
             </select>
             <br><br>
-            <label>Nhap thong tin: </label>
+            <label>Nhap thong tin: </label><br>
             <input type="text" class="find-staff" value="" name="staffInfor">
             <input type="submit" value="Find" />
         </div>
@@ -33,7 +39,10 @@
         $term = mysqli_real_escape_string($link, $_POST['staffInfor']);
         if (strcmp($selectOption, "Hoten") == 0) {
             $rs = mysqli_query($link, "SELECT * FROM NHANVIEN WHERE $selectOption LIKE '%$term'");
-        } else {
+        } else if(strcmp($selectOption, "Diachi") == 0) {
+            $rs = mysqli_query($link, "SELECT * FROM NHANVIEN WHERE $selectOption LIKE '%$term'");
+        }
+        else {
 
             if ($term == "") {
                 $rs = mysqli_query($link, "SELECT * FROM NHANVIEN");
