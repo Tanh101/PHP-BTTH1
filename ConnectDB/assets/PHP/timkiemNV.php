@@ -10,16 +10,20 @@
 
 <body>
     <form action="" method="POST">
-        <label for="cars">Tìm theo:</label>
-        <select name="inforOption" id="cars">
-            <option value="IDNV">IDNV</option>
-            <option value="Hoten">Họ Tên</option>
-            <option value="IDPB">IDPB</option>
-            <option value="Diachi">Địa Chỉ</option>
-        </select>
-        <br><br>
-        <input type="text" class="find-staff" value="" name="staffInfor">
-        <input type="submit" value="Find" />
+        <div>
+
+            <label for="cars">Chon loai tim kiem:</label>
+            <select name="inforOption" id="cars">
+                <option value="IDNV">IDNV</option>
+                <option value="Hoten">Họ Tên</option>
+                <option value="IDPB">IDPB</option>
+                <option value="Diachi">Địa Chỉ</option>
+            </select>
+            <br><br>
+            <label>Nhap thong tin: </label>
+            <input type="text" class="find-staff" value="" name="staffInfor">
+            <input type="submit" value="Find" />
+        </div>
     </form>
     <?php
     $link = mysqli_connect("localhost", "root", "") or die(mysqli_error($link));

@@ -37,7 +37,7 @@
             <?php
             echo '<a href="../PHP//login.php?status=update" target="frame3">Cập nhật</a><br>';
             echo '<a href="../PHP//login.php?status=delete" target="frame3">Xoa nhan vien</a><br>';
-            echo '<a href="../PHP//login.php?status=deleteAll" target="frame3">Xoa tat ca</a><br>';
+            echo '<a href="../PHP//login.php?status=delete_all" target="frame3">Xoa tat ca</a><br>';
             ?>
         </div>
     </form>
